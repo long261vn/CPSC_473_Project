@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -33,16 +34,15 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a class="navbar-brand" href="#">BabyPix</a></li>
+                    <a class="navbar-brand" href="#">BabyPix</a>
                 </ul>
-
                 <ul class="nav navbar-nav">
 
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><input type="button" class="btn btn-primary" onclick="location.href='login.html';" value="Login"></li>
-                    <li><input type="button" class="btn btn-primary" onclick="location.href='signup.html';" value="Sign Up"></li>
+                    <li><button id="create" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Upload</button></li>
+                    <li><input type="button" class="btn btn-primary" onclick="location.href='#';" value="Signout"></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -67,6 +67,48 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/remotedatastore.js" charset="utf-8"></script>
     <div id="images"></div>
+
+    <!-- Large modal -->
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    Upload Your Photo
+                </h4>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="/upload-target" class="dropzone needsclick dz-clickable" id="demo-upload">
+                        <div class="form-group  dz-clickable">
+                            Drop files here or click to upload.<br>
+                            <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Description</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        </div>
+                        <div class="checkbox">
+                            <label></label>
+                            <input type="checkbox" /> Check me out
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

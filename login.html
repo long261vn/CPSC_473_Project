@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -8,40 +8,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>BabyPix</title>
+    <title>Login</title>
 </head>
 
 <body>
-
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a class="navbar-brand" href="#">BabyPix</a></li>
+                    <a class="navbar-brand" href="#">BabyPix</a>
                 </ul>
 
                 <ul class="nav navbar-nav">
-
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><input type="button" class="btn btn-primary" onclick="location.href='login.html';" value="Login"></li>
+                    <li><input type="button" class="btn btn-primary" onclick="location.href='index.html';" value="Home"></li>
                     <li><input type="button" class="btn btn-primary" onclick="location.href='signup.html';" value="Sign Up"></li>
                 </ul>
             </div>
@@ -49,24 +42,27 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <div class="container">
-
+        <header>
+            <h1>Login</h1>
+        </header>
+        <form data-coffee-order="form" action="index.html">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input class="form-control" name="username" id="username" autofocus required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" name="password" id="password" autofocus required pattern="[a-zA-Z\s]+" />
+            </div>
+            <button type="submit" name="btnLogin" id="btnLogin">Login</button>
+        </form>
     </div>
-    <!-- /.container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-    <script src="scripts/photo.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/remotedatastore.js" charset="utf-8"></script>
     <div id="images"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
 
 </body>
 
