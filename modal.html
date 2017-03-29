@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Welcome To My Homepage</h1>
+        </div>
+
+        <div id="pageone" data-role="main" class="ui-content">
+            <p>Click on the image to enlarge it.</p>
+            <p>Notice that we have added a "back button" in the top right corner.</p>
+            <a href="#o1" data-rel="popup" data-position-to="window">
+                <img src="img/otter1.jpg" alt="Skaret View" style="width:200px;"></a>
+            <a href="#o2" data-rel="popup" data-position-to="window">
+                <img src="img/otter2.jpg" alt="Skaret View" style="width:200px;"></a>
+            <a href="#o3" data-rel="popup" data-position-to="window">
+                <img src="img/otter3.jpg" alt="Skaret View" style="width:200px;"></a>
+            <div data-role="popup" id="o1">
+                <p style="float:left">Snap 1</p>
+                <p style="float:right" id="p1"></p>
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/otter1.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                <script>
+                    document.getElementById("p1").innerHTML = Date();
+                </script>
+                <p>
+                    First Pic
+                </p>
+            </div>
+            <div data-role="popup" id="o2">
+                <p style="float:left">Snap 2</p>
+                <p style="float:right" id="p2"></p>
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/otter2.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                <script>
+                    document.getElementById("p2").innerHTML = Date();
+                </script>
+                <p>
+                    Second Pic
+                </p>
+            </div>
+            <div data-role="popup" id="o3">
+                <p style="float:left">Snap 3</p>
+                <p style="float:right" id="p3"></p>
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/otter3.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                <script>
+                    document.getElementById("p3").innerHTML = Date();
+                </script>
+                <p>
+                    Third Pic
+                </p>
+            </div>
+        </div>
+
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

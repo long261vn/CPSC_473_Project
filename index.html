@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <link rel="stylesheet" href="scripts/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -78,7 +79,63 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <div class="buttons">
+        <button id="add">Add images</button>
+        <button id="reset">Reset</button>
+    </div>
+
     <div class="container">
+
+        <h1>Feeds</h1>
+
+        <div class="grid">
+            <div class="grid-sizer"></div>
+
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+            </div>
+            <div class="grid-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+            </div>
+
+
+
+
+            <div id="status">
+                <progress max="7" value="0"></progress>
+            </div>
+            <div id="image-container"></div>
+
+        </div>
+
+
+
+
+
+
+
+
 
     </div>
     <!-- /.container -->
@@ -90,8 +147,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.min.js"></script>
     <script src="scripts/photo.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/Masonry.js"></script>
     <!-- Large modal -->
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -125,7 +185,7 @@
                         </div>
                         <div class="checkbox">
                             <label></label>
-                            <input type="checkbox"/> Check me out
+                            <input type="checkbox" /> Check me out
                         </div>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
