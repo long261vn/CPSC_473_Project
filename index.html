@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
@@ -12,6 +14,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+
+    <!-- These scripts change the style of everything -->
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
     <title>BabyPix</title>
 </head>
@@ -51,22 +57,68 @@
     </nav>
 
     <div class="container">
+        <div>
+            <button id="add">Add images</button>
+            <button id="reset">Reset</button>
+        </div>
 
-    </div>
-    <!-- /.container -->
+        <div class="container">
+
+            <h1>Feeds</h1>
+
+            <div class="grid">
+                <div class="grid-sizer"></div>
+
+                <!-- need to dynamically make the url and ref-->
+
+                <div class="grid-item">
+                    <a href="#o1" data-rel="popup" data-position-to="window">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+                    </a>
+                </div>
+
+                <div id="status">
+
+                </div>
+                <div id="image-container"></div>
 
 
-    <!-- Bootstrap core JavaScript
+            </div>
+
+            <div data-role="popup" id="o1">
+                <p style="float:left">Snap 1</p>
+                <p style="float:right" id="p1"></p>
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <img src="img/otter1.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                <script>
+                    document.getElementById("p1").innerHTML = Date();
+                </script>
+                <p>
+                    First Pic
+                </p>
+            </div>
+
+
+        </div>
+        <!-- /.container -->
+
+
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-    <script src="scripts/photo.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/remotedatastore.js" charset="utf-8"></script>
-    <div id="images"></div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+        <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.min.js"></script>
+
+
+        <script src="scripts/Masonry.js"></script>
+        <script src="scripts/photo.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+        <div id="images"></div>
 
 </body>
 
