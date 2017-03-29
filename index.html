@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+
     <link rel="stylesheet" href="scripts/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <title>Starter Template for Bootstrap</title>
 </head>
@@ -79,7 +85,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div class="buttons">
+    <div>
         <button id="add">Add images</button>
         <button id="reset">Reset</button>
     </div>
@@ -91,9 +97,21 @@
         <div class="grid">
             <div class="grid-sizer"></div>
 
+            <!-- need to dynamically make the url and ref-->
+
             <div class="grid-item">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+                <a href="#o1" data-rel="popup" data-position-to="window">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+                </a>
             </div>
+
+            <div id="status">
+              
+            </div>
+            <div id="image-container"></div>
+
+
+
             <div class="grid-item">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
             </div>
@@ -118,21 +136,20 @@
             <div class="grid-item">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
             </div>
-
-
-
-
-            <div id="status">
-                <progress max="7" value="0"></progress>
-            </div>
-            <div id="image-container"></div>
-
         </div>
 
-
-
-
-
+        <div data-role="popup" id="o1">
+            <p style="float:left">Snap 1</p>
+            <p style="float:right" id="p1"></p>
+            <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            <img src="img/otter1.jpg" style="width:800px;height:400px;" alt="Skaret View">
+            <script>
+                document.getElementById("p1").innerHTML = Date();
+            </script>
+            <p>
+                First Pic
+            </p>
+        </div>
 
 
 
@@ -149,6 +166,9 @@
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
     <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
     <script src="https://unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.min.js"></script>
+
+
+
     <script src="scripts/photo.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/Masonry.js"></script>

@@ -66,8 +66,8 @@ function getImageItem() {
   var src = rando < 100 ? '/foo/broken-' + rando + '.jpg' :
     // use lorempixel for great random images
     '//lorempixel.com/' + width + '/' + height + '/'  + '?' + rando;
-
-  item += '<img src="' + src + '"></div>';
+  src = 'img/otter1.jpg';
+  item += '<img src="' + src + '"/></div>';
   console.log(item);
   return item;
 }
