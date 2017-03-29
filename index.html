@@ -70,7 +70,8 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
-                    <li><button id="create" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">New</button></li>
+                    <li><button id="create" class="btn btn-primary">New</button></li>
+                    <!--data-toggle="modal" data-target=".bd-example-modal-lg"-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -92,9 +93,10 @@
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
     <script src="scripts/photo.js"></script>
     <script src="scripts/main.js"></script>
+
     <!-- Large modal -->
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div id="uploadModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -109,23 +111,19 @@
 
                 <!-- Modal Body -->
                 <div class="modal-body">
-                    <form action="/upload-target" class="dropzone needsclick dz-clickable" id="demo-upload">
-                        <div class="form-group  dz-clickable">
-                            Drop files here or click to upload.<br>
-                            <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+                    <form id="myForm">
+                        <div class="form-group dropzone center-block" id="photoUpload"><!--class="dropzone dz-clickable form-group" -->
+                            <div class="dz-default dz-message">
+                                <span>Drop your photo here!</span>
+                            </div>
                         </div>
-
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Your Photo title" />
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Description</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-                        </div>
-                        <div class="checkbox">
-                            <label></label>
-                            <input type="checkbox"/> Check me out
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description for your photo" />
                         </div>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
