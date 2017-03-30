@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <img class="btn btn-default" data-toggle="modal" data-target="#myModal" src="img\otter1.jpg" alt="Trolltunga, Norway" width="300" height="200">
+    <img class="btn btn-default" data-toggle="modal" data-target="#myModal1" src="img\otter2.jpg" alt="Trolltunga, Norway" width="300" height="200">
+    <img class="btn btn-default" data-toggle="modal" data-target="#myModal" src="img\otter3.jpg" alt="Trolltunga, Norway" width="300" height="200">
+    <img class="btn btn-default" data-toggle="modal" data-target="#myModal1" src="img\otter4.jpg" alt="Trolltunga, Norway" width="300" height="200">
+
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="float:left">One fine body&hellip;</p>
+                    <p style="float:right" id="p3"></p>
+                    <div>
+                        <img src="img\otter1.jpg" alt="Trolltunga, Norway" width="550" height="300">
+                    </div>
+                    <p style="align:center">Nice Pic</p>
+                    <script>
+                            document.getElementById("p3").innerHTML = Date();
+                    </script>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div id="myModal1" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="float:left">One fine body&hellip;</p>
+                    <p style="float:right" id="p1"></p>
+                    <div>
+                        <img src="img\otter2.jpg" alt="Trolltunga, Norway" width="550" height="300">
+                    </div>
+                    <p style="align:center">Nice Pic</p>
+                    <script>
+                        document.getElementById("p1").innerHTML = Date();
+                    </script>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+
+</html>
