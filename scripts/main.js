@@ -5,12 +5,18 @@
     var App = window.App;
     var Photo = App.Photo;
 
+<<<<<<< HEAD
     //var myphoto = new Photo('#create');
     //myphoto.addClickHandler();
 
     //hide input at first time
     //$('#input').hide();
 
+=======
+    var myphoto = new Photo('#create');
+    myphoto.addClickHandler();
+    myphoto.addSubmitHandler();
+>>>>>>> 817351f645f9e704b5806b54092a590328ca9301
 })(window);
 
 

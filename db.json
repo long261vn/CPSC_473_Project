@@ -1,12 +1,18 @@
 {
   "photos": [
     {
+<<<<<<< HEAD
       "id": "1",
+=======
+>>>>>>> 817351f645f9e704b5806b54092a590328ca9301
       "photoName": "test",
       "emailAddress": "test@bignerdranch.com",
       "title": "test",
       "description": "kdlfsj"
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 817351f645f9e704b5806b54092a590328ca9301
   ]
 }
