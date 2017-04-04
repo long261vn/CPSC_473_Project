@@ -159,3 +159,34 @@ $(document).ready(function() {
         });
     });
 });
+
+// =============================== Search ===============================
+$(document).ready(function () {
+    $("#btnSearch").click(function () {
+        var searchInfo = $("#sinfo").val();
+        var found = false;
+        $.ajax
+        ({
+            type: "GET",
+            url: "http://localhost:3002/pics",
+            dataType: 'json',
+            success: function (data) {
+                $.each(data, function(key, value){
+                    if(searchInfo == value.info){
+
+                        $("#uls").append("<li >Title: " + value.info + "</li><img src="+value.pic+" id=\"image\"/><br /><br />");
+                        found = true;
+                        return;
+                    }
+
+                });
+                if(found == true){
+                    alert("found");
+                }
+                else {
+                    alert(" NOT found");
+                }
+            }
+        });
+    });
+});

@@ -26,60 +26,43 @@
                 <li><a href="signup.html">Signup</a></li>
                 <li><a href="login.html">Log-in</a></li>
                 <li><a href="popup.html">Gallery</a></li>
-                <li><a href="search.html">Search</a></li>
             </ul>
             <h3 class="text-muted">CPSC 473 Project 1</h3>
         </div>
         <div class="jumbotron">
 
             <header>
-                <h1>Welcome Parents!</h1>
-                <h2>Please log-in to upload your children’s picture.</h2>
+                <h1>Search picture: </h1>
+
             </header>
             <!-- <section> -->
-            <div id="browse_app">
-                <a class="btn btn-large btn-info" href="signup.html">Signup</a>
-                <a class="btn btn-large btn-info" href="login.html">Login</a>
-            </div>
-            <!-- </section> -->
-            <br/>
-            <br/>
-            <br/>
-        </div>
+                <!-- <div class="panel panel-default">
+                    <div class="panel-body"> -->
+                        <!-- <form data-coffee-order="form"> -->
+                        <form>
+                            <div class="form-group">
+                                <label for="sinfo">Search info</label>
+                                <input class="form-control" name="sinfo" id="sinfo" autofocus required />
+                            </div>
 
-        <div class="jumbotron">
-            <!-- This is used for display pictures -->
-            <h2> Pictures show here: </h2>
-            <main class="main-content">
-                <ul id="ul">
+                            <div id="browse_app">
+                                <button class="btn btn-large btn-info" name="btnSearch" id="btnSearch" >Search</button>
+
+                            </div>
+                        </form>
+                    <!-- </div>
+                </div> -->
+                <br/>
+                <br/>
+                <br/>
+
+                <h2> Pictures show here: </h2>
+
+                <ul id="uls">
                 </ul>
-                <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="title"></h4>
-                            </div>
-                            <div class="modal-body">
-                                <p id="info" style="float:left">One fine body&hellip;</p>
-                                <p style="float:right" id="p3"></p>
-                                <div id="ii2">
-
-                                </div>
-                                <!-- <p style="align:center">Nice Pic</p> -->
-                                <script>
-                                var date= new Date()
-                    document.getElementById("p3").innerHTML = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
-                                </script>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-            </main>
-
+            <!-- </section> -->
         </div>
+
         <!-- /end jumbotron -->
         <div class="footer">
             <p>&copy; Team 1 - CPSC 473 - CSUF</p>
