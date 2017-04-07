@@ -1,19 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <title>Upload</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPSC 473 Project 1">
+    <meta name="author" content="Team 1">
+    <link rel="shortcut icon" href="stylesheets/superman.ico">
+    <title>CSUF 473</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 
 <body class="container">
+    <!-- <div class="container"> -->
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Log-out</a></li>
+        </ul>
+        <h3 class="text-muted">CPSC 473 Project 1</h3>
+    </div>
+    <div class="jumbotron">
     <header>
         <h1>Upload Pics !!!</h1>
     </header>
     <section>
         <div class="panel panel-default">
-            <div class="panel-body">
+            <!-- <div class="panel-body"> -->
                 <form picture="form">
                     <div class="form-group">
                         <div class="form-group">
@@ -21,21 +42,33 @@
                             <input class="form-control" name="info" id="info" autofocus required />
                         </div>
                         <input id="input" type="file">
+                        <div class="dropzone">
+                            <span data-message="example">Drag and drop your photo</span>
+                        </div>
                     </div>
+                    <div id="browse_app">
+                        <button type="submit" class="btn btn-large btn-info" name="button">submit</button>
+                        <a class="btn btn-large btn-info" href="index.html">Logout</a>
+                    </div>
+
                 </form>
-            </div>
+            <!-- </div> -->
         </div>
-        <div id="browse_app">
-            <a class="btn btn-large btn-info" href="index.html">Logout</a>
-        </div>
+
 
     </section>
-
-    <div id="images"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-    <script src="scripts/remotedatastore.js" charset="utf-8"></script>
-    <script src="scripts/main.js" charset="utf-8"></script>
-
+  </div>
+  <!-- /end jumbotron -->
+  <div class="footer">
+      <p>&copy; Team 1 - CPSC 473 - CSUF</p>
+  </div>
+  <!-- /container -->
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> -->
+  <script src="scripts/main.js" charset="utf-8"></script>
+  <script src="scripts/drag.js" charset="utf-8"></script>
 </body>
 
 </html>

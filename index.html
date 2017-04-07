@@ -1,125 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPSC 473 Project 1">
+    <meta name="author" content="Team 1">
+    <link rel="shortcut icon" href="stylesheets/superman.ico">
+    <title>CSUF 473</title>
 
-    <!-- These scripts change the style of everything -->
-    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-
-    <title>BabyPix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
-<body>
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a class="navbar-brand" href="#">BabyPix</a></li>
-                </ul>
-
-                <ul class="nav navbar-nav">
-
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><input type="button" class="btn btn-primary" onclick="location.href='login.html';" value="Login"></li>
-                    <li><input type="button" class="btn btn-primary" onclick="location.href='signup.html';" value="Sign Up"></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<body class="container">
+    <!-- <div class="container"> -->
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Log-in</a></li>
+                <li><a href="popup.html">Gallery</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+            <h3 class="text-muted">CPSC 473 Project 1</h3>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+        <div class="jumbotron">
 
-    <div class="container">
-        <div>
-            <button id="add">Add images</button>
-            <button id="reset">Reset</button>
+            <header>
+                <h1>Welcome Parents!</h1>
+                <h2>Please log-in to upload your children’s picture.</h2>
+            </header>
+            <!-- <section> -->
+            <div id="browse_app">
+                <a class="btn btn-large btn-info" href="signup.html">Signup</a>
+                <a class="btn btn-large btn-info" href="login.html">Login</a>
+            </div>
+            <!-- </section> -->
+            <br/>
+            <br/>
+            <br/>
         </div>
 
-        <div class="container">
 
-            <h1>Feeds</h1>
+        <div class="jumbotron">
+            <!-- This is used for display pictures -->
+            <h2> Pictures show here: </h2>
+            <main class="main-content">
+              <ul style="list-style-type: none" id="ul">
 
-            <div class="grid">
-                <div class="grid-sizer"></div>
+              </ul>
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="title"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p id="info" style="float:left">One fine body&hellip;</p>
+                                <p style="float:right" id="p3"></p>
+                                <div id="ii2">
 
-                <!-- need to dynamically make the url and ref-->
-
-                <div class="grid-item">
-                    <a href="#o1" data-rel="popup" data-position-to="window">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
-                    </a>
+                                </div>
+                                <p style="align:center">Nice Pic</p>
+                                <script>
+                                var date= new Date()
+                                document.getElementById("p3").innerHTML = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
+                                </script>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-
-                <div id="status">
-
-                </div>
-                <div id="image-container"></div>
-
-
-            </div>
-
-            <div data-role="popup" id="o1">
-                <p style="float:left">Snap 1</p>
-                <p style="float:right" id="p1"></p>
-                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-                <img src="img/otter1.jpg" style="width:800px;height:400px;" alt="Skaret View">
-                <script>
-                    document.getElementById("p1").innerHTML = Date();
-                </script>
-                <p>
-                    First Pic
-                </p>
-            </div>
-
+            </main>
 
         </div>
-        <!-- /.container -->
-
-
+        <!-- /end jumbotron -->
+        <div class="footer">
+            <p>&copy; Team 1 - CPSC 473 - CSUF</p>
+        </div>
+        <!-- /container -->
         <!-- Bootstrap core JavaScript
-    ================================================== -->
+    			================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-        <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
-        <script src="https://unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.min.js"></script>
-
-
-        <script src="scripts/Masonry.js"></script>
-        <script src="scripts/photo.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/remotedatastore.js" charset="utf-8"></script>
-        <div id="images"></div>
-
+        <!-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> -->
+        <script src="scripts/main.js" charset="utf-8"></script>
 </body>
 
 </html>
