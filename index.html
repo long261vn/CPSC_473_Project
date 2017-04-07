@@ -1,66 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <title>Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPSC 473 Project 1">
+    <meta name="author" content="Team 1">
+    <link rel="shortcut icon" href="stylesheets/superman.ico">
+    <title>CSUF 473</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body class="container">
-    <header>
-        <h1>Welcome to our website !!!</h1>
-    </header>
-    <section>
-        <div id="browse_app">
-            <a class="btn btn-large btn-info" href="signup.html">Signup</a>
-            <a class="btn btn-large btn-info" href="login.html">Login</a>
+    <!-- <div class="container"> -->
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Log-in</a></li>
+                <li><a href="popup.html">Gallery</a></li>
+            </ul>
+            <h3 class="text-muted">CPSC 473 Project 1</h3>
         </div>
+        <div class="jumbotron">
 
-    </section>
-    <br/>
-    <br/>
-    <br/>
-
-    <!-- This div is for display pictures -->
-    <h3> Pictures show here: </h3>
-    <div id="ul">
-        <ul> </ul>
-    </div>
-
-
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="title"></h4>
-                </div>
-                <div class="modal-body">
-                    <p id="info" style="float:left">One fine body&hellip;</p>
-                    <p style="float:right" id="p3"></p>
-                    <div id="ii2">
-
-                    </div>
-                    <p style="align:center">Nice Pic</p>
-                    <script>
-                        document.getElementById("p3").innerHTML = Date();
-                    </script>
-                </div>
+            <header>
+                <h1>Welcome Parents!</h1>
+                <h2>Please log-in to upload your children’s picture.</h2>
+            </header>
+            <!-- <section> -->
+            <div id="browse_app">
+                <a class="btn btn-large btn-info" href="signup.html">Signup</a>
+                <a class="btn btn-large btn-info" href="login.html">Login</a>
             </div>
-            <!-- /.modal-content -->
+            <!-- </section> -->
+            <br/>
+            <br/>
+            <br/>
         </div>
-        <!-- /.modal-dialog -->
-    </div>
 
 
-    <div id="images"></div>
+        <div class="jumbotron">
+            <!-- This is used for display pictures -->
+            <h2> Pictures show here: </h2>
+            <main class="main-content">
+              <ul style="list-style-type: none" id="ul">
 
+              </ul>
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="title"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p id="info" style="float:left">One fine body&hellip;</p>
+                                <p style="float:right" id="p3"></p>
+                                <div id="ii2">
 
-    <script src="scripts/main.js" charset="utf-8"></script>
+                                </div>
+                                <p style="align:center">Nice Pic</p>
+                                <script>
+                                var date= new Date()
+                                document.getElementById("p3").innerHTML = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
+                                </script>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </main>
 
+        </div>
+        <!-- /end jumbotron -->
+        <div class="footer">
+            <p>&copy; Team 1 - CPSC 473 - CSUF</p>
+        </div>
+        <!-- /container -->
+        <!-- Bootstrap core JavaScript
+    			================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> -->
+        <script src="scripts/main.js" charset="utf-8"></script>
 </body>
 
 </html>
