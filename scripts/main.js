@@ -1,3 +1,13 @@
+/*
+==================================================================================================
+CPSC_473_Project_1 : "Parents can share embarrassing baby pictures with their children’s potential dates"
+Group Members: Payaam Emami, Yijie Sun, Tushar Kamble, Remilda Dsilva, Kevin Lam, Long Nguyen
+==================================================================================================
+File: main.js
+Signup, Login, Load picture from db.json and display, search pics
+==================================================================================================
+*/
+
 /*eslint-disable no-unused-vars*/
 
 // =============================== Signup ===============================
