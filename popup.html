@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPSC 473 Project 1">
+    <meta name="author" content="Team 1">
+    <link rel="shortcut icon" href="stylesheets/superman.ico">
+    <title>CSUF 473</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
+    <!-- Custom styles for this template -->
+    <!--link href="stylesheets/jumbotron-narrow.css" rel="stylesheet"-->
 </head>
 
-<body>
+<body class="container">
+    <!-- <div class="container"> -->
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="login.html">Log-in</a></li>
+        </ul>
+        <h3 class="text-muted">CPSC 473 Project 1</h3>
+    </div>
+    <div class="jumbotron">
+      <ul style="list-style-type: none" id="ul">
 
+      </ul>
 
-    <img class="btn btn-default ig" id="1" value="1a" data-toggle="modal" data-target="#myModal" src="img\otter1.jpg" alt="Trolltunga, Norway" width="300" height="200">
-    <img class="btn btn-default ig" id="2" value="2" data-toggle="modal" data-target="#myModal" src="img\otter2.jpg" alt="Trolltunga, Norway" width="300" height="200">
-    <img class="btn btn-default ig" id="3" value="3" data-toggle="modal" data-target="#myModal" src="img\otter3.jpg" alt="Trolltunga, Norway" width="300" height="200">
-    <img class="btn btn-default ig" id="4" value="4" data-toggle="modal" data-target="#myModal" src="img\otter4.jpg" alt="Trolltunga, Norway" width="300" height="200">
+<!------------
+    <h1> Photo Gallery: </h1>
 
+    <img class="btn btn-default ig" id="1" value="1a" data-toggle="modal" data-target="#myModal" src="img\1.jpg" alt="Trolltunga, Norway">
+    <img class="btn btn-default ig" id="2" value="2" data-toggle="modal" data-target="#myModal" src="img\2.jpg" alt="Trolltunga, Norway">
+    <img class="btn btn-default ig" id="3" value="3" data-toggle="modal" data-target="#myModal" src="img\3.jpg" alt="Trolltunga, Norway">
+    <img class="btn btn-default ig" id="4" value="4" data-toggle="modal" data-target="#myModal" src="img\4.jpg" alt="Trolltunga, Norway">
+    <img class="btn btn-default ig" id="5" value="5" data-toggle="modal" data-target="#myModal" src="img\5.jpg" alt="Trolltunga, Norway">
 
+--------->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -31,7 +58,8 @@
                     </div>
                     <p style="align:center">Nice Pic</p>
                     <script>
-                        document.getElementById("p3").innerHTML = Date();
+                        var date= new Date()
+                        document.getElementById("p3").innerHTML = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
                     </script>
                 </div>
             </div>
@@ -39,9 +67,18 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
-
-    <script src="scripts/ajax1.js">
-    </script>
+  </div>
+  <!-- /end jumbotron -->
+  <div class="footer">
+      <p>&copy; Team 1 - CPSC 473 - CSUF</p>
+  </div>
+  <!-- /container -->
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> -->
+  <script src="scripts/main.js" charset="utf-8"></script>
+  <script src="scripts/ajax1.js" charset="utf-8"></script>
 </body>
 
 </html>
