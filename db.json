@@ -11,6 +11,12 @@
       "password": "home",
       "email": "home@a.com",
       "id": 2
+    },
+    {
+      "username": "user",
+      "password": "secret",
+      "email": "name@bignerdranch.com",
+      "id": 3
     }
   ],
   "pics": [
