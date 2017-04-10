@@ -5,7 +5,7 @@ CPSC_473_Project_1 : "Parents can share embarrassing baby pictures with their ch
 Group Members: Payaam Emami, Yijie Sun, Tushar Kamble, Remilda Dsilva, Kevin Lam, Long Nguyen
 ==================================================================================================
 File: popup.html
-Use for galary page
+Gallery page
 ==================================================================================================
 -->
 
@@ -25,72 +25,66 @@ Use for galary page
     <!-- Bootstrap core CSS -->
     <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
     <!-- Custom styles for this template -->
-    <!--link href="stylesheets/jumbotron-narrow.css" rel="stylesheet"-->
+    <link href="stylesheets/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body class="container">
     <!-- <div class="container"> -->
-    <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="signup.html">Signup</a></li>
-          <li><a href="login.html">Log-in</a></li>
-          <li class="active"><a href="popup.html">Gallery</a></li>
-          <li><a href="search.html">Search</a></li>
-        </ul>
-        <h3 class="text-muted">CPSC 473 Project 1</h3>
-    </div>
-    <div class="jumbotron">
-      <ul style="list-style-type: none" id="ul">
-
-      </ul>
-
-<!------------
-    <h1> Photo Gallery: </h1>
-
-    <img class="btn btn-default ig" id="1" value="1a" data-toggle="modal" data-target="#myModal" src="img\1.jpg" alt="Trolltunga, Norway">
-    <img class="btn btn-default ig" id="2" value="2" data-toggle="modal" data-target="#myModal" src="img\2.jpg" alt="Trolltunga, Norway">
-    <img class="btn btn-default ig" id="3" value="3" data-toggle="modal" data-target="#myModal" src="img\3.jpg" alt="Trolltunga, Norway">
-    <img class="btn btn-default ig" id="4" value="4" data-toggle="modal" data-target="#myModal" src="img\4.jpg" alt="Trolltunga, Norway">
-    <img class="btn btn-default ig" id="5" value="5" data-toggle="modal" data-target="#myModal" src="img\5.jpg" alt="Trolltunga, Norway">
-
---------->
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="title"></h4>
-                </div>
-                <div class="modal-body">
-                    <p id="info" style="float:left">One fine body&hellip;</p>
-                    <p style="float:right" id="p3"></p>
-                    <div id="ii2">
-
-                    </div>
-                    <p style="align:center">Nice Pic</p>
-                    <script>
-                        var date= new Date()
-                        document.getElementById("p3").innerHTML = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
-                    </script>
-                </div>
-            </div>
-            <!-- /.modal-content -->
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Log-in</a></li>
+                <li class="active"><a href="popup.html">Gallery</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+            <h3 class="text-muted">CPSC 473 Project 1</h3>
         </div>
-        <!-- /.modal-dialog -->
-    </div>
-  </div>
-  <!-- /end jumbotron -->
-  <div class="footer">
-      <p>&copy; Team 1 - CPSC 473 - CSUF</p>
-  </div>
-  <!-- /container -->
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <!-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> -->
-  <script src="scripts/main.js" charset="utf-8"></script>
-  <!-- <script src="scripts/ajax1.js" charset="utf-8"></script> -->
+
+        <div class="jumbotron">
+            <!-- This is used for display pictures -->
+            <h1> Gallery: </h1>
+            <main class="main-content">
+              <ul style="list-style-type: none" id="ul">
+
+              </ul>
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="title"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p id="info" style="float:left">One fine body&hellip;</p>
+                                <p style="float:right" id="p3"></p>
+                                <div id="ii2">
+
+                                </div>
+                                <p style="align:center">Nice Pic</p>
+                                <script>
+                                var date= new Date()
+                                document.getElementById("p3").innerHTML = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
+                                </script>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </main>
+
+        </div>
+        <!-- /end jumbotron -->
+        <div class="footer">
+            <p>&copy; Team 1 - CPSC 473 - CSUF</p>
+        </div>
+        <!-- /container -->
+        <!-- Bootstrap core JavaScript
+    			================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> -->
+        <script src="scripts/main.js" charset="utf-8"></script>
 </body>
 
 </html>
